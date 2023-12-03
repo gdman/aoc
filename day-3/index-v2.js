@@ -63,7 +63,7 @@ for (let y = 0; y < engine.length; y++) {
     }
 }
 
-let total = Object.entries(gears).reduce(
+const total = Object.entries(gears).reduce(
     (total, [ gear, numbers ]) => {
         if (numbers.length === 2) {
             total += numbers[0] * numbers[1];
