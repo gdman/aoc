@@ -24,8 +24,6 @@ const total = input.split('\n').reduce((total, str) => {
         }
     }
 
-    console.log(first, last)
-
     return total + parseInt((first ?? last) + (last ?? first));
 }, 0);
 
