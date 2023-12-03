@@ -12,14 +12,19 @@ const total = input.split('\n').reduce((total, str) => {
         if (!first && isInt(str[up])) {
             first = str[up];
         }
-        if (!last && isInt(str[down])) {
-            last = str[down];
+        if (!last) {
+            if (isInt(str[down])) {
+                last = str[down];
+            } else {
+                down--;
+            }
         }
         if (first && last) {
             break;
         }
-        down--;
     }
+
+    console.log(first, last)
 
     return total + parseInt((first ?? last) + (last ?? first));
 }, 0);
