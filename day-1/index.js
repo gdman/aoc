@@ -8,7 +8,7 @@ const total = input.split('\n').reduce((total, str) => {
     let first;
     let last;
     let down = str.length - 1;
-    for (let up = 0; up <= down; up++) {
+    for (let up = 0; up <= str.length - 1; up++) {
         if (!first && isInt(str[up])) {
             first = str[up];
         }
