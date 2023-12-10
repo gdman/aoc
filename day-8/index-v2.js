@@ -7,7 +7,7 @@ const getLowestCommonMultiple = (a, b) => {
     const low = Math.min(a, b);
 
     let i = high;
-    while(i % low !== 0){
+    while (i % low !== 0) {
         i += high;
     }
     return i;
